@@ -47,5 +47,34 @@ namespace Calculator
         {
             _ActiveTextBox.Text += ((Button)sender).Text;
         }
+
+        private void button_operatorEqual_Click(object sender, EventArgs e)
+        {
+            int firstNumber = int.Parse(textBox_input1.Text);
+            int secondNumber = int.Parse(textBox_input2.Text);
+            string? operatorValue = comboBox_operators.SelectedItem.ToString();
+            int result = 0;
+            switch (operatorValue)
+            {
+                case "+":
+                    result = firstNumber + secondNumber;
+                    break;
+                case "-":
+                    result = firstNumber - secondNumber;
+                    break;
+                case "*":
+                    result = firstNumber * secondNumber;
+                    break;
+                case "/":
+                    result = firstNumber / secondNumber;
+                    break;
+            }
+            textBox_result.Text = result.ToString();
+
+        }
+
+        private void comboBox_operators_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

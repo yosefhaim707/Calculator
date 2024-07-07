@@ -96,6 +96,7 @@
             button_operatorEqual.TabIndex = 16;
             button_operatorEqual.Text = "=";
             button_operatorEqual.UseVisualStyleBackColor = false;
+            button_operatorEqual.Click += button_operatorEqual_Click;
             // 
             // button_value1
             // 
@@ -225,7 +226,7 @@
             button_operatorMult.Name = "button_operatorMult";
             button_operatorMult.Size = new Size(134, 66);
             button_operatorMult.TabIndex = 28;
-            button_operatorMult.Text = "x";
+            button_operatorMult.Text = "*";
             button_operatorMult.UseVisualStyleBackColor = false;
             button_operatorMult.Click += button_operatorActive;
             // 
@@ -313,12 +314,12 @@
             comboBox_operators.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_operators.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             comboBox_operators.FormattingEnabled = true;
-            comboBox_operators.Items.AddRange(new object[] { "+", "-", "/", "x" });
+            comboBox_operators.Items.AddRange(new object[] { "+", "-", "/", "*" });
             comboBox_operators.Location = new Point(504, 98);
             comboBox_operators.Name = "comboBox_operators";
             comboBox_operators.Size = new Size(136, 56);
             comboBox_operators.TabIndex = 32;
-            comboBox_operators.SelectedIndex = 0;
+            comboBox_operators.SelectedIndexChanged += comboBox_operators_SelectedIndexChanged;
             // 
             // CalculatorForm
             // 
